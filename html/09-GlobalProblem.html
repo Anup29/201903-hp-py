@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>00-python-2-version-alerts</title>
+<title>09-GlobalProblem</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13116,32 +13116,41 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Python-2-Version-Alerts">Python 2 Version Alerts<a class="anchor-link" href="#Python-2-Version-Alerts">&#182;</a></h1><ul>
-<li>this notebook contains version alert and breaking changes between python 2 and python 3</li>
-<li>the code here is based on python 2</li>
-<li>for python 3. refer to respective notebook</li>
-</ul>
-<h2 id="print">print<a class="anchor-link" href="#print">&#182;</a></h2><ul>
-<li>print is a breaking change between python 2 and python 3</li>
-<li><strong>python 2</strong> <ul>
-<li>print is a statement and <strong>doesn't require</strong> parentheses <strong>()</strong></li>
-</ul>
-</li>
-<li><strong>python 3</strong> <ul>
-<li>print is a function and requires parentheses <strong>()</strong></li>
+<h1 id="Global-Problems">Global Problems<a class="anchor-link" href="#Global-Problems">&#182;</a></h1><ul>
+<li>Python is designed to be simple language</li>
+<li>you don't need to have a <strong>main</strong> function</li>
+<li>there is no main function in python</li>
+<li>we write global codes</li>
+<li>names are just references</li>
+<li>there is not const<ul>
+<li>name can be reassigned</li>
 </ul>
 </li>
 </ul>
-<h3 id="Note-below-code-works-only-in-python-2-and-not-python-3">Note below code works only in python 2 and not python 3<a class="anchor-link" href="#Note-below-code-works-only-in-python-2-and-not-python-3">&#182;</a></h3>
+
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">plus</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="s1">&#39;hello world&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plus</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13154,95 +13163,40 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt"></div>
+    <div class="prompt output_prompt">Out[2]:</div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hello world
-</pre>
-</div>
-</div>
 
-</div>
+
+<div class="output_text output_subarea output_execute_result">
+<pre>5</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Note:-python-2-print-also-works-with-parentheses">Note: python 2 print also works with parentheses<a class="anchor-link" href="#Note:-python-2-print-also-works-with-parentheses">&#182;</a></h3>
+
 </div>
 </div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plus</span><span class="o">=</span><span class="s1">&#39;hi&#39;</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>hello world
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Recommendations">Recommendations<a class="anchor-link" href="#Recommendations">&#182;</a></h2><ul>
-<li>always use print with parentheses even in <strong>Python 2</strong> </li>
-<li>Migrating the code to python 3 will be easier.</li>
-</ul>
-<h3 id="print-('hello-world')-is-not-same-in-python-2-and-python-3">print ('hello world') is not same in python 2 and python 3<a class="anchor-link" href="#print-('hello-world')-is-not-same-in-python-2-and-python-3">&#182;</a></h3><ul>
-<li>although the parenthes work in both python 2 and python 3, the behavior is different</li>
-<li><p><strong>Python 2</strong></p>
-<ul>
-<li>print doesn't require (or use) parentheses</li>
-<li>parentheses is the part of data being printed not part of print itself</li>
-</ul>
-</li>
-<li><p><strong>Python 3</strong></p>
-<ul>
-<li>print is a function and parentheses is part of print</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>This difference is not clear if you use print to print a single item</strong></li>
-<li>it varies while printing multiple items.</li>
-</ul>
-<h2 id="print-to-print-mulitple-items">print to print mulitple items<a class="anchor-link" href="#print-to-print-mulitple-items">&#182;</a></h2><ul>
-<li>to print multiple items</li>
-</ul>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plus</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13252,293 +13206,6 @@ div#notebook {
 <div class="output_wrapper">
 <div class="output">
 
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 2 3 4 5
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="But-if-you-use-parenthese">But if you use parenthese<a class="anchor-link" href="#But-if-you-use-parenthese">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>(1, 2, 3, 4, 5)
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Note:">Note:<a class="anchor-link" href="#Note:">&#182;</a></h3><ul>
-<li><p>print(1,2,3,4,5) =&gt; tries to <strong>print</strong> a value <strong>(1,2,3,4,5)</strong></p>
-
-<pre><code> * **(1,2,3,4,5)** is an ~~array like structure~~ **tuple** in python </code></pre>
-</li>
-<li><p>we are trying to print an <strong>array</strong></p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Recommendation">Recommendation<a class="anchor-link" href="#Recommendation">&#182;</a></h2><ul>
-<li><p>avoid printing multiple items on a single print</p>
-</li>
-<li><p>Favour formatted string for printing multiple values using a single print call</p>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Vivek&#39;</span>
-<span class="n">domain</span><span class="o">=</span><span class="s1">&#39;conceptarchitect.in&#39;</span>
-<span class="nb">id</span><span class="o">=</span><span class="mi">7</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello </span><span class="si">%s</span><span class="s1">, your emp id is </span><span class="si">%d</span><span class="s1"> and email is </span><span class="si">%s</span><span class="s1">@</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="nb">id</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">domain</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello Vivek, your emp id is 7 and email is Vivek@conceptarchitect.in
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1"> </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1 2 3 4
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Python-Version-Alert!!!">Python Version Alert!!!<a class="anchor-link" href="#Python-Version-Alert!!!">&#182;</a></h3><ul>
-<li>end and sep are function features</li>
-<li>since <strong>python 2</strong> print is a statement and not a function, it is not supported in python 2</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span> <span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-8-7d9d1d6be720&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    print 1,2,3,4, sep=&#39;\t&#39;</span>
-<span class="ansi-white-intense-fg ansi-bold">                      ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-9-3aa8037c554e&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    print(1,2,3,4, sep=&#39;\t&#39;)</span>
-<span class="ansi-white-intense-fg ansi-bold">                      ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="input">input<a class="anchor-link" href="#input">&#182;</a></h1><ul>
-<li><p>Python <strong>input</strong> varies between version 2 and version 3</p>
-</li>
-<li><p><strong>Python3</strong></p>
-<ul>
-<li><strong>input</strong> takes a string </li>
-<li>you need to convert string to desired type by using int(), float(), eval() etc</li>
-</ul>
-</li>
-<li><p><strong>python 2</strong></p>
-<ul>
-<li><strong>input</strong> evaluates the string</li>
-<li><p>It is similar to <strong>eval(input())</strong> of python 3</p>
-</li>
-<li><p>to take a string input python 2 has another function called <strong>raw_input()</strong></p>
-</li>
-</ul>
-</li>
-</ul>
-<ul>
-<li><strong>python 3</strong><ul>
-<li>doesn't have <strong>raw_input</strong></li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;name?&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello {}. Welcome to python&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>name?vivek
-</pre>
-</div>
-</div>
 
 <div class="output_area">
 
@@ -13548,35 +13215,45 @@ div#notebook {
 <div class="output_subarea output_text output_error">
 <pre>
 <span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-10-28bc8c268641&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>name<span class="ansi-yellow-intense-fg ansi-bold">=</span>input<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;name?&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      2</span> <span class="ansi-green-intense-fg ansi-bold">print</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;Hello {}. Welcome to python&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>name<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-4-728459782102&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>plus<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
 
-<span class="ansi-green-intense-fg ansi-bold">C:\Users\vivek\Anaconda3\envs\python27\lib\site-packages\ipykernel\ipkernel.pyc</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-intense-fg ansi-bold">(prompt)</span>
-<span class="ansi-green-fg">    174</span>             self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_sys_eval_input <span class="ansi-yellow-intense-fg ansi-bold">=</span> builtin_mod<span class="ansi-yellow-intense-fg ansi-bold">.</span>input
-<span class="ansi-green-fg">    175</span>             builtin_mod<span class="ansi-yellow-intense-fg ansi-bold">.</span>raw_input <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>raw_input
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 176</span><span class="ansi-yellow-intense-fg ansi-bold">             </span>builtin_mod<span class="ansi-yellow-intense-fg ansi-bold">.</span>input <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-green-intense-fg ansi-bold">lambda</span> prompt<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-blue-intense-fg ansi-bold">&#39;&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">:</span> eval<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">.</span>raw_input<span class="ansi-yellow-intense-fg ansi-bold">(</span>prompt<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">    177</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>_save_getpass <span class="ansi-yellow-intense-fg ansi-bold">=</span> getpass<span class="ansi-yellow-intense-fg ansi-bold">.</span>getpass
-<span class="ansi-green-fg">    178</span>         getpass<span class="ansi-yellow-intense-fg ansi-bold">.</span>getpass <span class="ansi-yellow-intense-fg ansi-bold">=</span> self<span class="ansi-yellow-intense-fg ansi-bold">.</span>getpass
-
-<span class="ansi-green-intense-fg ansi-bold">C:\Users\vivek\Anaconda3\envs\python27\lib\site-packages\ipykernel\ipkernel.pyc</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;vivek&#39; is not defined</pre>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;str&#39; object is not callable</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="The-same-can-happend-with-existing-python-names">The same can happend with existing python names<a class="anchor-link" href="#The-same-can-happend-with-existing-python-names">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">id</span><span class="o">=</span><span class="mi">7</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">name</span><span class="o">=</span><span class="nb">raw_input</span><span class="p">(</span><span class="s1">&#39;name?&#39;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Hello {}. Welcome to python&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="nb">id</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13592,26 +13269,59 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>name?vivek
-Hello vivek. Welcome to python
-</pre>
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-6-b37840cd7e2a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-fg">      1</span> l<span class="ansi-yellow-intense-fg ansi-bold">=</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-cyan-intense-fg ansi-bold">2</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">3</span><span class="ansi-yellow-intense-fg ansi-bold">,</span><span class="ansi-cyan-intense-fg ansi-bold">4</span><span class="ansi-yellow-intense-fg ansi-bold">]</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>id<span class="ansi-yellow-intense-fg ansi-bold">(</span>l<span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;int&#39; object is not callable</pre>
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Other-common-names-commonly-overriden">Other common names commonly overriden<a class="anchor-link" href="#Other-common-names-commonly-overriden">&#182;</a></h3><ul>
+<li>min</li>
+<li><p>max</p>
+</li>
+<li><p>names overriddent within a function has function scope</p>
+</li>
+<li>names overwritten in global scope has global issues</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_min_max</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="n">_max</span><span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="n">_min</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">_min</span><span class="p">,</span><span class="n">_max</span><span class="p">)</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">n1</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;n1?&#39;</span><span class="p">)</span>
-<span class="n">n2</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;n2?&#39;</span><span class="p">)</span>
-
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;{} + {} = {} &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">n1</span><span class="o">+</span><span class="n">n2</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">find_min_max</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13624,97 +13334,37 @@ Hello vivek. Welcome to python
 
 <div class="output_area">
 
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>n1?2
-n2?8*6
-2 + 48 = 50 
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="print-with-end-and-sep">print with end and sep<a class="anchor-link" href="#print-with-end-and-sep">&#182;</a></h3><ul>
-<li>end and sep are function features</li>
-<li>in python 3 print() is a function and supports end and sep</li>
-<li>in python 2 print is a statement and doesn't end and sep</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Division">Division<a class="anchor-link" href="#Division">&#182;</a></h2><ul>
-<li><p><strong>python 3</strong> always returns a float (real number) for a division (even if both operand is int)</p>
-<ul>
-<li>This is the arithemtically correct division</li>
-</ul>
-</li>
-<li><p><strong>python 2</strong> like <strong>C-style</strong> language returns an int if the two operand are ints</p>
-<ul>
-<li>int / int = int (floored result not rounded)</li>
-<li>int / float= float</li>
-<li>float/ int = float</li>
-<li>float / float =float</li>
-</ul>
-</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">7</span><span class="o">/</span><span class="mi">2</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[14]:</div>
+    <div class="prompt output_prompt">Out[10]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>3</pre>
+<pre>(2, 11)</pre>
 </div>
 
 </div>
 
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">max</span><span class="o">=</span><span class="mi">20</span>  <span class="c1"># gloabl overwrite. it changes for entire code base</span>
+
+<span class="k">def</span> <span class="nf">call_me</span><span class="p">():</span>
+    <span class="nb">min</span><span class="o">=</span><span class="mi">10</span> <span class="c1"># local overwrite. it affects only current function</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;in call me&#39;</span><span class="p">,</span><span class="nb">min</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;in call me&#39;</span><span class="p">,</span><span class="nb">max</span><span class="p">)</span>
+    
+    
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -13724,7 +13374,7 @@ n2?8*6
 <div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">99</span><span class="o">/</span><span class="mi">10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">call_me</span><span class="p">()</span>
 </pre></div>
 
     </div>
@@ -13737,15 +13387,14 @@ n2?8*6
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[15]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>in call me 10
+in call me 20
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13757,7 +13406,8 @@ n2?8*6
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">99</span><span class="o">/</span><span class="mf">10.0</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">min</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">max</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13770,15 +13420,14 @@ n2?8*6
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[16]:</div>
+    <div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9.9</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;built-in function min&gt;
+20
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -13790,30 +13439,10 @@ n2?8*6
 <div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">99</span><span class="o">//</span><span class="mi">10</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="o">=</span><span class="s1">&#39;hello&#39;</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[17]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9</pre>
-</div>
-
-</div>
-
 </div>
 </div>
 
@@ -13823,70 +13452,7 @@ n2?8*6
 <div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="mi">99</span><span class="o">//</span><span class="mf">10.0</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[18]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>9.0</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="*args-use-case">*args use case<a class="anchor-link" href="#*args-use-case">&#182;</a></h1><ul>
-<li><p>If a function takes different parameters they must be passed in below mentioned sequences only</p>
-<ul>
-<li>positional parameters</li>
-<li>default value parameters</li>
-<li>args</li>
-</ul>
-</li>
-<li><p><strong>*args</strong> should be passed as the last parameter</p>
-</li>
-</ul>
-<h3 id="why?">why?<a class="anchor-link" href="#why?">&#182;</a></h3><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">call_me</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="k">pass</span>
-
-<span class="n">call_me</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># x=1  args=(2,3)  y=?</span>
-
-<span class="n">call_me</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span> <span class="c1"># x=1 args=(2,3,4,5) y=?</span>
-</pre></div>
-<h3 id="Python-version-Alert!!!">Python version Alert!!!<a class="anchor-link" href="#Python-version-Alert!!!">&#182;</a></h3><ul>
-<li>In python 2 <strong>*args</strong> must be the last parameter</li>
-<li>In python 3 <strong>*args</strong> should be (but not must be) the last parameter</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">call_me</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">*</span><span class="n">args</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;x={}</span><span class="se">\t</span><span class="s1">args={}</span><span class="se">\t</span><span class="s1">y={}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">args</span><span class="p">,</span><span class="n">y</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;hello world&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13904,11 +13470,12 @@ n2?8*6
 
 <div class="output_subarea output_text output_error">
 <pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  File </span><span class="ansi-green-intense-fg ansi-bold">&#34;&lt;ipython-input-20-b4047d60c5b1&gt;&#34;</span><span class="ansi-cyan-intense-fg ansi-bold">, line </span><span class="ansi-green-intense-fg ansi-bold">1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    def call_me(x,*args,y):</span>
-<span class="ansi-white-intense-fg ansi-bold">                        ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
-</pre>
+<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-18-66eb98f8e52a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
+<span class="ansi-green-intense-fg ansi-bold">----&gt; 1</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>print<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#39;hello world&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
+
+<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;str&#39; object is not callable</pre>
 </div>
 </div>
 
@@ -13919,134 +13486,44 @@ n2?8*6
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="range-and-xrange">range and xrange<a class="anchor-link" href="#range-and-xrange">&#182;</a></h2><ul>
-<li>in <strong>python 2</strong> range creates a list (returns a stored list of value)</li>
-<li>in <strong>python 3</strong> range is a computed sequence that generates next value on the fly</li>
-<li>inspired by <strong>python3</strong> , <strong>python2</strong> introuduced another function <strong>xrange()</strong> to generate a computed sequence<ul>
-<li>python3 doesn't have anything like stored range or xrange function</li>
+<h1 id="Recommendation">Recommendation<a class="anchor-link" href="#Recommendation">&#182;</a></h1><h2 id="Avoid-global-codes">Avoid global codes<a class="anchor-link" href="#Avoid-global-codes">&#182;</a></h2><ul>
+<li>names coflict within a function is easy to resolve</li>
+<li>global names are more difficult to handle</li>
+<li><p>while python allows writing start up logic in global space, we should avoid it</p>
+</li>
+<li><p>we should write all logic in our functions</p>
+</li>
+</ul>
+<h2 id="Reinvent-main()">Reinvent main()<a class="anchor-link" href="#Reinvent-main()">&#182;</a></h2><ul>
+<li>python doesn't need or undersant a <strong>main()</strong></li>
+<li><p>we can always create our own <strong>main()</strong> function</p>
+<ul>
+<li>you can call it whatever you like</li>
+<li>i prefer main</li>
+</ul>
+</li>
+<li><p>call it manually</p>
+<ul>
+<li>you will have exactly one global line of code</li>
 </ul>
 </li>
 </ul>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1">#write code here which you would typically write in global space</span>
 
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">r</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">r</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+<span class="c1"># call your function yourself</span>
+<span class="n">main</span><span class="p">()</span>
 </pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[1, 2, 3, 4, 5, 6, 7, 8, 9] &lt;type &#39;list&#39;&gt;
-</pre>
-</div>
-</div>
+<h2 id="Unsolved-Problem">Unsolved Problem<a class="anchor-link" href="#Unsolved-Problem">&#182;</a></h2><ul>
+<li>the definition of main() function (or all other functions) still create a global name</li>
+<li>these names can still conflict or overwrite other names</li>
+</ul>
+<ul>
+<li>how to manage a large code base?</li>
+</ul>
 
 </div>
 </div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">r2</span><span class="o">=</span><span class="nb">xrange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
-<span class="k">print</span> <span class="n">r2</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">r2</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>xrange(1, 10) &lt;type &#39;xrange&#39;&gt;
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">r2</span><span class="p">:</span>
-    <span class="k">print</span> <span class="n">value</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
-</pre></div>
-
-    </div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
