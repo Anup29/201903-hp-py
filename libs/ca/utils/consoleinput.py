@@ -1,7 +1,14 @@
+import sys
 
 
-def read_string(prompt):
-    return input(prompt)
+
+if sys.version_info.major>=3:
+    read_string=input
+else:
+    read_string=raw_input
+
+#def read_string(prompt):
+#    return input(prompt)
 
 def read_int(prompt):
     return int(read_string(prompt))

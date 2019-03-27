@@ -1,5 +1,5 @@
 import consoleinput as ci #import consoleutils and name object as ci
-import primes as p;
+import primes as p
 from maths import *
 
 def main():

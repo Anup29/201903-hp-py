@@ -25,7 +25,7 @@ def prime_range(min,max=None):
     return result
 
 
-def main():
+def test():
     print('testing primes')
     print('module name is ',__name__)
     resultSet={2:True, 3:True, 9:False,0:True, -9:False, -7: False }
@@ -42,5 +42,6 @@ def main():
     print('-'*20)        
     print()
 
+
 if __name__=='__main__':
-    main()
+    test()
